@@ -5,11 +5,7 @@ from time import sleep
 import sys
 from mfrc522 import SimpleMFRC522
 import RPi.GPIO as GPIO
-led=40
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(led,GPIO.OUT)
-GPIO.output(led,GPIO.LOW)
+
 reader = SimpleMFRC522()
 try:
     while True:
@@ -20,5 +16,5 @@ try:
         print(text)
         sleep(5)
 except KeyboardInterrupt:
-        GPIO.cleanup()
-        raise
+    GPIO.cleanup()
+    raise
