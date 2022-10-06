@@ -1,9 +1,4 @@
 import mysql.connector
 
-cnx = mysql.connector.connect(user='Ramses', password='Tanis36', host='192.168.1.68', database='CodigoIoT')
-print("conexion realizada")
-print(cnx)
-
-print ("Cerrar conexión")
+cnx = mysql.connector.connect(user='Ramses', password='Tanis36', host='127.0.0.1', database='CodigoIoT')
 cnx.close()
-print ("Conexion cerrada")
